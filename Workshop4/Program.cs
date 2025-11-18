@@ -4,26 +4,74 @@
     {
         static void Main(string[] args)
         {
-            //task 4: Player Class with Constructors
-            // creating Object using default constructor 
-            Player p1 = new Player();
+            // Task 5
+            Console.Write("Enter the day (Example: Sunday): ");
+            string day = Console.ReadLine();
+
+
+            // Check if the day is weekend or weekday
+            if (day.ToLower() == "friday" || day.ToLower() == "saturday")
+            {
+                Console.WriteLine("It is: Weekend");
+            }
+            else
+            {
+                Console.WriteLine("It is: Weekday");
+            }
             Console.WriteLine();
 
-            // Create another object using parameterized constructor
-            Player player2 = new Player("Karuna Giri",1 ,50);
 
-            // Print the values of the fields using both objects
-            Console.WriteLine("Player 1 (Default Constructor):");
-            Console.WriteLine("Player Name: " + p1.playerName);
-            Console.WriteLine("Level: " + p1.level);
-            Console.WriteLine("Health: " + p1.health);
-            Console.WriteLine();
+            //// Record Book
 
-            Console.WriteLine("Player 2 (Parameterized Constructor):");
-            Console.WriteLine("Player Name: " + player2.playerName);
-            Console.WriteLine("Level: " + player2.level);
-            Console.WriteLine("Health: " + player2.health);
-            Console.WriteLine();
+            //// Create an object for book and assign the values
+            //Book book1 = new Book("WAR AND PEACE", "Leo Tolstoy", 680);
+
+
+            //// Print the value of first object
+            //Console.WriteLine("Book 1:");
+            //Console.WriteLine("Title: " + book1.title);
+            //Console.WriteLine("Author: " + book1.author);
+            //Console.WriteLine("Price: $" + book1.price);
+            //Console.WriteLine();
+
+            //// Create another object and by using with expression, change the title and price
+            //Book book2 = book1 with { title = "Harry Potter", price = 2199 };
+
+            //Console.WriteLine("Book 2 ");
+            //Console.WriteLine("Title: " + book2.title);
+            //Console.WriteLine("Author: " + book2.author);
+            //Console.WriteLine("Price: $" + book2.price);
+            //Console.WriteLine();
+
+            //// Deconstruct the second object into three variables and print them
+            //var (title, author, price) = book2;
+            //Console.WriteLine("Deconstructed Book 2:");
+            //Console.WriteLine("Title: " + title);
+            //Console.WriteLine("Author: " + author);
+            //Console.WriteLine("Price: $" + price);
+
+
+
+            ////task 4: Player Class with Constructors
+            //// creating Object using default constructor 
+            //Player p1 = new Player();
+            //Console.WriteLine();
+
+            //// Create another object using parameterized constructor
+            //Player player2 = new Player("Karuna Giri",1 ,50);
+
+            //// Print the values of the fields using both objects
+            //Console.WriteLine("Player 1 (Default Constructor):");
+            //Console.WriteLine("Player Name: " + p1.playerName);
+            //Console.WriteLine("Level: " + p1.level);
+            //Console.WriteLine("Health: " + p1.health);
+            //Console.WriteLine();
+
+            //Console.WriteLine("Player 2 (Parameterized Constructor):");
+            //Console.WriteLine("Player Name: " + player2.playerName);
+            //Console.WriteLine("Level: " + player2.level);
+            //Console.WriteLine("Health: " + player2.health);
+            //Console.WriteLine();
 
 
 
