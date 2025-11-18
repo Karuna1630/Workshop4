@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Workshop4
 {
-    internal class RecordBook
-    {
+   
+    
 
         public record Book(string title, string author, double price);
-    }
+    
 }
