@@ -4,71 +4,106 @@
     {
         static void Main(string[] args)
         {
-            // Creating object of ParameterDemo
-            ParameterDemo demo = new ParameterDemo();
+            // --- Object using default constructor ---
+            Player p1 = new Player();   // prints message from default constructor
 
-            //Calling Increase(ref int)
-            int num = 20;                    // initial value
-            demo.Increase(ref num);          // ref allows method to modify original value
-            Console.WriteLine("After Increase: " + num);
+            // Assign values manually (optional)
+            p1.playerName = "Karuna";
+            p1.level = 1;
+            p1.health = 100;
 
-            //Calling GetFullName(out string) 
-            demo.GetFullName(out string fullName);   // out parameter must be assigned inside the method
-            Console.WriteLine("Full Name: " + fullName);
+            // Printing values of p1
+            Console.WriteLine("Player 1 Details:");
+            Console.WriteLine("Name: " + p1.playerName);
+            Console.WriteLine("Level: " + p1.level);
+            Console.WriteLine("Health: " + p1.health);
 
-            //Calling SumAll(params int[]) 
-            Console.WriteLine("SumAll(5, 10, 15): " + demo.SumAll(5, 10, 15));
-            Console.WriteLine("SumAll(1, 2, 3, 4, 5): " + demo.SumAll(1, 2, 3, 4, 5));
+            Console.WriteLine();
 
+            //Object using parameterized constructor 
+            Player p2 = new Player("Anil", 5, 80);
 
-
-            //// Create object
-            //Calculator calc = new Calculator();
-
-            //// Call and print welcome message
-            //calc.PrintWelcome();
-
-            ////calling calculator methods
-            //Console.WriteLine("Addition: " + calc.Add(5, 3));
-            //Console.WriteLine("Multiplication: " + calc.Multiply(5, 3));
-
-            //// Call Multiply method (using default value for num2)
-            //Console.WriteLine("Multiplication: " + calc.Multiply(5));
+            // Printing values of p2
+            Console.WriteLine("Player 2 Details:");
+            Console.WriteLine("Name: " + p2.playerName);
+            Console.WriteLine("Level: " + p2.level);
+            Console.WriteLine("Health: " + p2.health);
+        
 
 
 
 
 
 
-            //// Creating first student object
-            //Student student1 = new Student();
-            //student1.id = 101;
-            //student1.name = "Karuna Giri";
-            //student1.age = 20;
 
-            //// Displaying details of the first student
-            //Console.WriteLine("Student 1:");
-            //Console.WriteLine(student1.name);
-            //Console.WriteLine(student1.id);
-            //Console.WriteLine(student1.age);
 
-            //// Creating second student object
-            //Student student2 = new Student();
-            //student2.id = 102;
-            //student2.name = "Anil Thapa";   
-            //student2.age = 20;
+        //// Task 3: Parameter Types Demo
+        //// Creating object of ParameterDemo
+        //ParameterDemo demo = new ParameterDemo();
 
-            //// Displaying details of the second student
-            //Console.WriteLine("Student 2:");
-            //Console.WriteLine(student2.name);
-            //Console.WriteLine(student1.id);
-            //Console.WriteLine(student1.age);
+        ////Calling Increase(ref int)
+        //int num = 20;                    // initial value
+        //demo.Increase(ref num);          // ref allows method to modify original value
+        //Console.WriteLine("After Increase: " + num);
 
-            //// Printing static field
-            //Console.WriteLine("Total Students: " + Student.totalStudents);
+        ////Calling GetFullName(out string) 
+        //demo.GetFullName(out string fullName);   // out parameter must be assigned inside the method
+        //Console.WriteLine("Full Name: " + fullName);
+
+        ////Calling SumAll(params int[]) 
+        //Console.WriteLine("SumAll(5, 10, 15): " + demo.SumAll(5, 10, 15));
+        //Console.WriteLine("SumAll(1, 2, 3, 4, 5): " + demo.SumAll(1, 2, 3, 4, 5));
 
 
 
-        }
+        //task 2: Calculator Class with Methods
+        //// Create object
+        //Calculator calc = new Calculator();
+
+        //// Call and print welcome message
+        //calc.PrintWelcome();
+
+        ////calling calculator methods
+        //Console.WriteLine("Addition: " + calc.Add(5, 3));
+        //Console.WriteLine("Multiplication: " + calc.Multiply(5, 3));
+
+        //// Call Multiply method (using default value for num2)
+        //Console.WriteLine("Multiplication: " + calc.Multiply(5));
+
+
+
+
+
+        //Task 1: Student Class with Static Field
+        //// Creating first student object
+        //Student student1 = new Student();
+        //student1.id = 101;
+        //student1.name = "Karuna Giri";
+        //student1.age = 20;
+
+        //// Displaying details of the first student
+        //Console.WriteLine("Student 1:");
+        //Console.WriteLine(student1.name);
+        //Console.WriteLine(student1.id);
+        //Console.WriteLine(student1.age);
+
+        //// Creating second student object
+        //Student student2 = new Student();
+        //student2.id = 102;
+        //student2.name = "Anil Thapa";   
+        //student2.age = 20;
+
+        //// Displaying details of the second student
+        //Console.WriteLine("Student 2:");
+        //Console.WriteLine(student2.name);
+        //Console.WriteLine(student1.id);
+        //Console.WriteLine(student1.age);
+
+        //// Printing static field
+        //Console.WriteLine("Total Students: " + Student.totalStudents);
+
+
+
+    }
     }
 }
