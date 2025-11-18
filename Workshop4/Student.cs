@@ -8,11 +8,18 @@ namespace Workshop4
 {
     internal class Student
     {
-        
-        public int age;
+        //creating instance fields
         public int id;
+        public int age;
         public string? name;
-        
-        public static int totalStudents;
+
+        // Static field
+        public static int totalStudents = 0;
+
+        // Constructor to increase static count each time object is created
+        public Student()
+        {
+            totalStudents++;
+        }
     }
 }
