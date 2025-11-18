@@ -4,20 +4,38 @@
     {
         static void Main(string[] args)
         {
-            // Create object
-            Calculator calc = new Calculator();
+            // Creating object of ParameterDemo
+            ParameterDemo demo = new ParameterDemo();
 
-            // Call and print welcome message
-            calc.PrintWelcome();
+            //Calling Increase(ref int)
+            int num = 20;                    // initial value
+            demo.Increase(ref num);          // ref allows method to modify original value
+            Console.WriteLine("After Increase: " + num);
 
-            //calling calculator methods
-            Console.WriteLine("Addition: " + calc.Add(5, 3));
-            Console.WriteLine("Multiplication: " + calc.Multiply(5, 3));
+            //Calling GetFullName(out string) 
+            demo.GetFullName(out string fullName);   // out parameter must be assigned inside the method
+            Console.WriteLine("Full Name: " + fullName);
 
-            // Call Multiply method (using default value for num2)
-            Console.WriteLine("Multiplication: " + calc.Multiply(5));
+            //Calling SumAll(params int[]) 
+            Console.WriteLine("SumAll(5, 10, 15): " + demo.SumAll(5, 10, 15));
+            Console.WriteLine("SumAll(1, 2, 3, 4, 5): " + demo.SumAll(1, 2, 3, 4, 5));
 
-         
+
+
+            //// Create object
+            //Calculator calc = new Calculator();
+
+            //// Call and print welcome message
+            //calc.PrintWelcome();
+
+            ////calling calculator methods
+            //Console.WriteLine("Addition: " + calc.Add(5, 3));
+            //Console.WriteLine("Multiplication: " + calc.Multiply(5, 3));
+
+            //// Call Multiply method (using default value for num2)
+            //Console.WriteLine("Multiplication: " + calc.Multiply(5));
+
+
 
 
 
